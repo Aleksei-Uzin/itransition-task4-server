@@ -4,7 +4,7 @@ import { db } from '../db/connection.js'
 
 const router = express.Router()
 
-router.get('/', async (request, response) => {
+router.get('/users/', async (request, response) => {
   const collection = await db.collection('users')
   const result = await collection.find({}).toArray()
   response
@@ -13,7 +13,7 @@ router.get('/', async (request, response) => {
     .status(200)
 })
 
-router.get('/:id', async (request, response) => {
+router.get('/users/:id', async (request, response) => {
   const collection = await db.collection('users')
   const query = { _id: new ObjectId(request.params.id) }
   const result = await collection.findOne(query)
@@ -22,7 +22,7 @@ router.get('/:id', async (request, response) => {
   else response.send(result).status(200)
 })
 
-router.post('/', async (request, response) => {
+router.post('/users/', async (request, response) => {
   try {
     const newDocument = {
       name: request.body.name,
@@ -41,7 +41,7 @@ router.post('/', async (request, response) => {
   }
 })
 
-router.patch('/:id', async (request, response) => {
+router.patch('/users/:id', async (request, response) => {
   try {
     const query = { _id: new ObjectId(request.params.id) }
     const updates = {
@@ -64,7 +64,7 @@ router.patch('/:id', async (request, response) => {
   }
 })
 
-router.delete('/:id', async (request, response) => {
+router.delete('/users/:id', async (request, response) => {
   try {
     const query = { _id: new ObjectId(request.params.id) }
     const collection = await db.collection('users')
