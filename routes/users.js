@@ -7,7 +7,10 @@ const router = express.Router()
 router.get('/', async (request, response) => {
   const collection = await db.collection('users')
   const result = await collection.find({}).toArray()
-  response.send(result).status(200)
+  response
+    .set('Content-Security-Policy', "default-src 'self'")
+    .send(result)
+    .status(200)
 })
 
 router.get('/:id', async (request, response) => {
