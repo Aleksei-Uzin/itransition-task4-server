@@ -80,17 +80,17 @@ router.patch('/:id', async (request, response) => {
       },
     }
 
-    const collection = await db.collection('users')
-    const result = await collection.updateOne(query, updates)
-
     await admin.auth().updateUser(request.body.uid, {
       disabled: !status,
     })
 
+    const collection = await db.collection('users')
+    const result = await collection.updateOne(query, updates)
+
     response.send(result).status(200)
   } catch (err) {
     console.error(err)
-    response.status(500).send('Error updating record')
+    response.status(500).send(err.message)
   }
 })
 
