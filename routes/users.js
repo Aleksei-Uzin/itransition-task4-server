@@ -8,7 +8,7 @@ const databaseURL = process.env.FIREBASE_DATABASE_URL
 const type = process.env.TYPE
 const project_id = process.env.PROJECT_ID
 const private_key_id = process.env.PRIVATE_KEY_ID
-const private_key = process.env.PRIVATE_KEY
+// const private_key = process.env.PRIVATE_KEY
 const client_email = process.env.CLIENT_EMAIL
 const client_id = process.env.CLIENT_ID
 const auth_uri = process.env.AUTH_URI
@@ -22,7 +22,8 @@ admin.initializeApp({
     type,
     project_id,
     private_key_id,
-    private_key,
+    private_key:
+      '-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDSp5TNzKjfNGkh\nFhnfbC3SeMyXR4BXxT1IjyJd0N9V5WLZXcLc0zSaD0q4RbWQ3ONzeUwbNOJnNUlD\nKSh8bWR3vIFgy08k6DCXuzLuikxPksKa3YhbY6Kms4xj3XdY9Moa3tWtHsoX2EJ4\nkchmO5AGuE+qNzbhrioqnIb8rtcNx1ygJSV5Ar4nxMI+bSKa9au/uZDxBFTDefLA\nRRQhqaXGI2sIy2nJZJMCVFQEeT1nqAZL4NVsh/NU2G1CU7PVDnutyT0N66PYQDS3\nrgpUFhWMTWnwjSXyhYqehGq1ag6xcZGzwSKpGiHogIqV0QLIK34PrDfEL6m+JT2I\nFsbEZbnFAgMBAAECggEACwoaO8DGdtAN1FyOpY1LR3TqL+Fg4filsghCQk1gbuVz\nDTYjMKRm5M35WffZQIq65sHMEb7vQH5j5P+irgajlbzMwPBWqPX8Ge+HB0Y7Io5r\n4WbLrxJlIzxUlqU0DHbjoo3b/9MVvzMnpJ7rNCRZ82g0UJTNLP2OGyaR0mstPP0F\nz4xN/S3P/dd8I8uk1Tnhd5KmLq9IL+EpTw7ae0F1vOkan+rLa0x9T/V/x16GAD0K\nNtWLRI7aL2JWOdwcNXiQUhqvaWLGNS03X6NaYQOtikaiBjUPWvpy5A/r9TUJISxI\ndrrmt+g3pA4T6q3FcS1csjooabW/W9LCn3WdQeW6IQKBgQDrZ7jeo+5pVAeG6hfd\nltmgOloZkW17z2QUnOigoE0Uyeol5Il4lQDB8z2LR7qydQvAJdS2Vk+0S4KLkY2x\nmpOBBpH8QeRQSlkg/enWs97tIdKgVlKxOXMgAU+qzyxtgpEr/KoekQwzN+axRKoT\nmZLcZxUEn5g1orEXWYQ7zz/PEQKBgQDlFYfaWAUTXxbdZBOhJ4lNkJ6UrdtIYBoa\nMwCBgqISw+KK8da7WBmuN2QGWkHjVHm6sqTEZ2tvgXOTooL+ftk13GXpnqiU9wGu\n7JWTtwUQfiUL8/cuUbPgAqDwkBzh51Oo6Pc6vpOcwKXG7J+2uTa8TJWpS5AbQMBB\nmG+H+aindQKBgQCq+CQOn2USXpMw62f16g+ZDYhOtY6cs11ukx9pOcOB67wBVWB6\nkU2Bj5YNSEVSQywLm+5Hl5w/x+/CSi5s5WVn+kuguIKHxdfB3GgvJWgtNblx9gAM\n8zqn7gvcdKdByeiB1/n+RT5lHJ6R9NrJbWp6ZOug9gBoRAb2fG9LuRQQ4QKBgQCE\nbwkFqgLtKvit7lAGxzNyGtwCeeueEKimYru1I08M6B9MUfjgf1MBS1ZQ8dbLVCe3\nTdVBEcSjRsQJIlb2R2DM6WglQaqVy6I2fOEP7ytHWJWULmrEZUlGhF6EE9wOoMvV\nhzB9znTJlvl/YYYHfVVuUBvpLhzWFH3Qrg40HplojQKBgEvdrKhHUs3dwA4M6bFw\nUkoLJtrnx6q0uO2BKbW1jpv7KO1ftc31WQbnn0YFFMjiASbbKdMQmgWuxBzdS8jo\n3YSbn95XyF8oujkfkMhWZZ/GXjHspzx36uKqvQzuUx0vPAVPSn5LHNaiEw3kilWJ\ndwLzcDBv5L2D89hmlT5g727G\n-----END PRIVATE KEY-----\n',
     client_email,
     client_id,
     auth_uri,
